@@ -14,5 +14,15 @@ func Aggregate(user *User, todos *TodosResponse) DashboardResponse {
 		result.Status = "Rookie"
 	}
 
+	for _, todo := range todos.Todos {
+		if !todo.Completed {
+			result.PendingTaskCount++
+			if result.NextUrgentTask == nil {
+				t := todo.Title
+				result.NextUrgentTask = &t
+			}
+		}
+	}
+
 	return result
 }
