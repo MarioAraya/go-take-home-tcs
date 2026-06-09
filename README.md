@@ -4,11 +4,9 @@ BFF service that aggregates user profile + todo data from dummyjson.com
 
 ## Run
 
-git clone https://github.com/MarioAraya/go-take-home-tcs && cd go-take-home-tcs
-go mod tidy
-go run ./cmd/api
+git clone https://github.com/MarioAraya/go-take-home-tcs && cd go-take-home-tcs && go mod tidy && go run ./cmd/api
 
-Visit: http://localhost:8080
+Visit: http://localhost:8080/dashboard/1
 
 ## Example
 
